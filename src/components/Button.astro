@@ -1,0 +1,10 @@
+---
+export interface Props {
+    url: string
+    text: string
+}
+
+const{ url, text } = Astro.props
+--- 
+
+<a class="text-dark-500 flex gap-5 bg-light-500 px-8 py-2 rounded-lg max-w-fit text-lg font-medium z-30"href={url}>{text}</a>

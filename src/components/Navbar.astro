@@ -6,7 +6,7 @@ import Button from './Button.astro';
 // 3. replace that button in here and in the hero section on the index page.
 ---
 
-<header class='w-full z-50 absolute bg-dark-500/30 backdrop-blur-sm'>
+<header class='w-full z-50 fixed bg-dark-500/30 backdrop-blur-sm'>
   <nav class='py-5'>
     <ul class='flex justify-between items-center px-7'>
       <li
@@ -21,7 +21,7 @@ import Button from './Button.astro';
         </a>
       </li>
       <li>
-        <ul class='flex flex-row items-center gap-4'>
+        <ul class='flex flex-row items-center gap-2 md:gap-4'>
           <li class='text-light-400 font-medium'>
             <a href='/about'>About</a>
           </li>

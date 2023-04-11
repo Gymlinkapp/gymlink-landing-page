@@ -12,6 +12,28 @@ module.exports = {
         'accent-500': '#724CF9',
       },
     },
+    animation: {
+      'row-1-translate': 'row-1-translate 10s ease-in-out infinite',
+      'row-2-translate': 'row-2-translate 10s ease-in-out infinite',
+      'row-3-translate': 'row-3-translate 10s ease-in-out infinite',
+    },
+    keyframes: {
+      'row-1-translate': {
+        '0%': { transform: 'translateY(0)' },
+        '50%': { transform: 'translateY(-1rem)' },
+        '100%': { transform: 'translateY(0)' },
+      },
+      'row-2-translate': {
+        '0%': { transform: 'translateY(0)' },
+        '50%': { transform: 'translateY(0.5rem)' },
+        '100%': { transform: 'translateY(0)' },
+      },
+      'row-3-translate': {
+        '0%': { transform: 'translateY(0)' },
+        '50%': { transform: 'translateY(-0.5rem)' },
+        '100%': { transform: 'translateY(0)' },
+      },
+    },
   },
   plugins: [],
 };

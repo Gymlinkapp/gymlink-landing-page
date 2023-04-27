@@ -14,22 +14,20 @@ const backgroundUrl =
     class={`bg-dark-500 min-h-screen bg-[url("/Gymlink-bg.jpg")] xl:pt-32 relative bg-cover bg-center`}
   >
     <div
-      class='inset-0 bg-gradient-to-t from-dark-500 to-transparent z-30 absolute'
+      class='inset-0 bg-dark-500/75 md:bg-transparent md:bg-gradient-to-t md:from-dark-500 md:to-transparent z-30 absolute'
     >
     </div>
     <section
       class='flex flex-col gap-5 pt-32 md:pt-48 px-4 lg:px-48 z-50 tracking-wider'
     >
       <div class='flex flex-col md:flex-row relative'>
-        <div class='z-40 flex flex-col items-center md:items-start gap-5'>
+        <div class='z-40 flex flex-col items-start gap-5'>
           <h1
-            class='text-light-500 items-center text-center md:text-left md:items-start text-5xl md:text-7xl font-bold brightness-200 md:w-3/4'
+            class='text-light-500 text-left md:items-start text-5xl md:text-7xl font-bold brightness-200 md:w-3/4'
           >
             Link up with like-minded gym goers.
           </h1>
-          <h3
-            class='text-light-400 text-xl items-center text-center md:text-start max-w-lg lg:max-w-3xl'
-          >
+          <h3 class='text-light-400 text-xl text-start max-w-lg lg:max-w-3xl'>
             A gym social network solving the problem of finding a gym buddy. If
             you are bored of going to the gym alone, or need that extra
             motivation to get you through your workout, Gymlink is a great place
@@ -43,7 +41,11 @@ const backgroundUrl =
         <div
           class='w-72 flex md:hidden md:w-[30rem] mt-20 md:mt-0 mx-auto md:mx-0 z-50'
         >
-          <img src='/mockup1.png' alt='mockup' class='w-full object-cover' />
+          <img
+            src='/mockup1.png'
+            alt='mockup'
+            class='w-full object-cover skew-x-2'
+          />
         </div>
         <Phone />
       </div>

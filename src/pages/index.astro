@@ -1,53 +1,45 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Button from '../components/Button.astro';
-import Phone from '../components/Phone.astro';
-
-const backgroundUrl =
-  'https://images.unsplash.com/photo-1571902943202-507ec2618e8f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1550&q=80';
-
-// 1. size the text properly
+import Layout from "../layouts/Layout.astro";
+import Button from "../components/Button.astro";
 ---
 
-<Layout title='Gymlink - Link up with like-minded fitness enthusiasts.'>
-  <main
-    class={`bg-dark-500 min-h-screen bg-[url("/Gymlink-bg.jpg")] xl:pt-32 relative bg-cover bg-center`}
-  >
+<Layout title="Gymlink - Link up with like-minded fitness enthusiasts.">
+  <main class={`bg-dark-500 min-h-screen xl:pt-32 relative bg-cover bg-center`}>
+    <video
+      autoplay
+      muted
+      loop
+      id="bg-video"
+      class="absolute inset-0 h-full object-cover"
+    >
+      <source src="3d-mockups1-lower.mp4" type="video/mp4" />
+    </video>
     <div
-      class='inset-0 bg-dark-500/75 md:bg-transparent md:bg-gradient-to-t md:from-dark-500 md:to-transparent z-30 absolute'
+      class="inset-0 bg-dark-500/75 md:bg-transparent md:bg-gradient-to-t md:from-dark-500 md:to-transparent z-30 absolute"
     >
     </div>
     <section
-      class='flex flex-col gap-5 pt-32 md:pt-48 px-4 lg:px-48 z-50 tracking-wider'
+      class="flex flex-col gap-5 pt-72 md:pt-48 px-4 lg:px-48 z-50 tracking-wider items-center"
     >
-      <div class='flex flex-col md:flex-row relative'>
-        <div class='z-40 flex flex-col items-start gap-5'>
-          <h1
-            class='text-light-500 text-left md:items-start text-5xl md:text-7xl font-bold brightness-200 md:w-3/4'
-          >
-            Link up with like-minded gym goers.
-          </h1>
-          <h3 class='text-light-400 text-xl text-start max-w-lg lg:max-w-3xl'>
-            A gym social network solving the problem of finding a gym buddy. If
-            you are bored of going to the gym alone, or need that extra
-            motivation to get you through your workout, Gymlink is a great place
-            to start.
-          </h3>
-          <Button
-            text='Download'
-            url='https://testflight.apple.com/join/NTM6DRrW'
-          />
-        </div>
-        <div
-          class='w-72 flex md:hidden md:w-[30rem] mt-20 md:mt-0 mx-auto md:mx-0 z-50'
-        >
-          <img
-            src='/mockup1.png'
-            alt='mockup'
-            class='w-full object-cover skew-x-2'
-          />
-        </div>
-        <Phone />
+      <h1
+        class="text-light-500 text-center text-5xl md:text-7xl font-bold brightness-200 z-50"
+      >
+        Link up with like-minded gym goers.
+      </h1>
+      <h3 class="text-light-400 text-xl text-center max-w-lg lg:max-w-4xl z-50">
+        Need new gym buddies? Need motivation? Gymlink helps you find nearby like-minded gym goers. Find your gym and or nearby gyms.
+      </h3>
+      <div class="flex flex-row z-50 gap-2">
+      <Button
+        variant="primary"
+        text="Download"
+        url="https://testflight.apple.com/join/NTM6DRrW"
+      />
+      <Button
+        variant="secondary"
+        text="About"
+        url="/about"
+      />
       </div>
     </section>
   </main>

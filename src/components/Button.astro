@@ -3,9 +3,10 @@ export interface Props {
   url: string;
   text: string;
   variant: "primary" | "secondary";
+  internalLink?: boolean;
 }
 
-const { url, text, variant } = Astro.props;
+const { url, text, variant, internalLink } = Astro.props;
 ---
 
 <a
@@ -15,7 +16,7 @@ const { url, text, variant } = Astro.props;
       : "bg-transparent border-[1px] border-light-500 text-light-500 hover:bg-light-500 hover:text-dark-500 ease-in-out transition-all duration-300"
   }`}
   href={url}
-  target="_blank"
+  target={internalLink ? "_self" : "_blank"}
 >
   {text}
 </a>
